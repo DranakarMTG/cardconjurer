@@ -70,5 +70,6 @@ loadFramePacks([
 	{name:'Celid\'s Asap', value:'CustomCelidAsap'},
 	{name:'Magrao\'s Kaldheim', value:'CustomMagraoKaldheim'},
 	{name:'Pokemon', value:'Pokemon'},
-	{name:'Circuit', value:'Circuit'}
+	{name:'Circuit', value:'Circuit'},
+	{name:'Borderless Class', value:'BorderlessClass'}
 ])
