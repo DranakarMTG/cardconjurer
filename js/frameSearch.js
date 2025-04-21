@@ -259,6 +259,7 @@ const frameNames = new Map ([
 	['Magrao\'s Kaldheim', 'CustomMagraoKaldheim'],
 	['Pokemon', 'Pokemon'],
 	['Circuit', 'Circuit'],
+	['Borderless Class', 'BorderlessClass'],
 ]);
 
 frameSearch = (str) => {
