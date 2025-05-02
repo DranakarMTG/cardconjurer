@@ -3439,6 +3439,9 @@ function writeText(textObject, targetContext) {
 		rawText = rawText.replace(/\*/g, '{fontbelerenbsc}*{fontsaloongirl}');
 	}
 	rawText = rawText.replace(/ - /g, ' — ');
+	if(textObject.font == 'CarnevaleeFreakshow'){
+		rawText = rawText.replace(/ — /g, ' -- ');
+	}
 	var splitText = rawText.replace(/\n/g, '{line}').replace(/{-}/g, '\u2014').replace(/{divider}/g, '{/indent}{lns}{bar}{lns}{fixtextalign}');
 	if (rawText.trim().startsWith('{flavor}') || rawText.trim().startsWith('{oldflavor}')) {
 		splitText = splitText.replace(/{flavor}/g, '{i}').replace(/{oldflavor}/g, '{i}');
