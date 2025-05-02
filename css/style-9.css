@@ -191,6 +191,14 @@
 	font-family: plantinmtprosemiboldit;
 	src: url('../fonts/PlantinMTProSemiBdIt.woff2') format("woff2");
 }
+@font-face {
+	font-family: Beardsons;
+	src: url("../fonts/Beardsons.ttf") format('truetype');
+}
+@font-face {
+	font-family: CarnevaleeFreakshow;
+	src: url("../fonts/CarnevaleeFreakshow.ttf") format('truetype');
+}
 /*Variables*/
 :root {
 	--site-background: url('../img/lowpolyBackground.svg');
