@@ -24,7 +24,7 @@ document.querySelector('#loadFrameVersion').onclick = async function() {
 	//resets things so that every frame doesn't have to
 	await resetCardIrregularities();
 	//sets card version
-	card.version = 'm15ExtendedArtShort';
+	card.version = 'circusLegend';
 	card.hideBottomInfoBorder = true;
 	//art bounds
 	card.artBounds = {x:0, y:0, width:1, height:0.7};
@@ -40,9 +40,9 @@ document.querySelector('#loadFrameVersion').onclick = async function() {
 	//text
 	loadTextOptions({	
 		mana: {name:'Mana Cost', text:'',x:-0.011, y:0.712, width:0.9292, height:71/2100, oneLine:true, size:0.033, align:'right', shadowX:-0.001, shadowY:0.0029, manaCost:true, manaPrefix:'breakingNews', manaSpacing:0, rotation: -6},
-		title: {name:'Title', text:'', x:0.24, y:0.135, width:0.8292, height:0.0543, oneLine:true, font:'Beardsons', size:0.07, rotation: -15},
-		smalltitle: {name:'Sub Title', text:'Subtitle', x:0.455, y:0.09, width:0.4, height:0.0543, oneLine:true, font:'Beardsons', size:0.035, rotation: -15},
-		type: {name:'Type', text:'', x:0.042, y:0.69, width:0.8292, height:0.0543, oneLine:true, font:'CarnevaleeFreakshow', size:0.037, rotation: -5.0},
+		title: {name:'Title', text:'', x:0.20, y:0.140, width:0.4292, height:0.0543, oneLine:true, font:'Beardsons', size:0.07, rotation: -15, align:'center'},
+		subtitle: {name:'Sub Title', x:0.655, y:0.019, width:0.2, height:0.113, oneLine:false, font:'Beardsons', size:0.035, rotation: -15},
+		type: {name:'Type', text:'', x:0.042, y:0.69, width:0.71, height:0.0543, oneLine:true, font:'CarnevaleeFreakshow', size:0.037, rotation: -5.0},
 		rules: {name:'Rules Text', text:'', x:0.0355, y:0.762, width:0.85, height:0.220, size:0.05, font:'decour', rotation: -5.0},
 		pt: {name:'Power/Toughness', text:'', x:0.815, y:0.917, width:0.15, height:0.06, size:0.033, font:'Beardsons', oneLine:true, align:'center', rotation: -5.3, kerning: 0.022}
 	});

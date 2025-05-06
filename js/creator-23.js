@@ -4821,7 +4821,7 @@ function changeCardIndex() {
 	if (name.startsWith('A-')) { name = name.replace('A-', '{alchemy}'); }
 
 	if (card.text.title) {
-		if (card.version == 'wanted') {
+		if (card.version == 'wanted' || card.version == 'circusLegend') {
 			var subtitle = '';
 			var index = name.indexOf(', ');
 
@@ -4839,7 +4839,22 @@ function changeCardIndex() {
 
 	if (card.text.nickname) {card.text.nickname.text = cardToImport.flavor_name || '';}
 	if (card.text.mana) {card.text.mana.text = cardToImport.mana_cost || '';}
-	if (card.text.type) {card.text.type.text = langFontCode + cardToImport.type_line || '';}
+	
+	if (card.text.type) {
+		if(card.version == 'circusStandard') {
+			var subtype = '';
+			var index = cardToImport.type_line.indexOf(' — ');
+
+			if (index > 0) {
+			  card.text.subtype.text = langFontCode + curlyQuotes(cardToImport.type_line.substring(index+2));
+			  card.text.type.text = langFontCode + curlyQuotes(cardToImport.type_line.substring(0, index+1));
+			} else {
+				card.text.type.text = langFontCode + curlyQuotes(cardToImport.type_line);
+				card.text.subtype.text = '';
+			}	
+
+		} else {card.text.type.text = langFontCode + cardToImport.type_line || '';}
+}
 
 	var italicExemptions = ['Boast', 'Cycling', 'Visit', 'Prize', 'I', 'II', 'III', 'IV', 'I, II', 'II, III', 'III, IV', 'I, II, III', 'II, III, IV', 'I, II, III, IV', '• Khans', '• Dragons', '• Mirran', '• Phyrexian', 'Prototype', 'Companion', 'To solve', 'Solved'];
 	var rulesText = (cardToImport.oracle_text || '').replace(/(?:\((?:.*?)\)|[^"\n]+(?= — ))/g, function(a){

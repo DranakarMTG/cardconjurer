@@ -71,5 +71,9 @@ loadFramePacks([
 	{name:'Magrao\'s Kaldheim', value:'CustomMagraoKaldheim'},
 	{name:'Pokemon', value:'Pokemon'},
 	{name:'Circuit', value:'Circuit'},
-	{name:'Borderless Class', value:'BorderlessClass'}
+	{name:'Borderless Class', value:'BorderlessClass'},
+	{name:'Circus Legend', value:'CircusLegend'},
+	{name:'Circus Standard', value:'CircusStandard'},
+	{name:'Borderless Eldraine Storybook', value:'StorybookWOEBorderless'},
+	{name:'Borderless Seethrough Eldraine Storybook', value:'StorybookWOEBorderlessSeeThrough'}
 ])
